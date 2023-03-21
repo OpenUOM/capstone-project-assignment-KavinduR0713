@@ -34,7 +34,7 @@ app.get("/listTeachers", async function (req, res) {
   let data = await readTeachers();
 
   res.setHeader("Content-Type", "application/json");
-  res.end(JSON.stringify({"id": "teacher_id"}));
+  res.end(JSON.stringify(data));
 });
 
 app.post("/getTeacherInfo", async function (req, res) {
@@ -90,7 +90,7 @@ app.get("/listStudents", async function (req, res) {
   let data = await readStudents();
 
   res.setHeader("Content-Type", "application/json");
-  res.end(JSON.stringify({"id": "student_id"}));
+  res.end(JSON.stringify(data));
 });
 
 app.post("/getStudentInfo", async function (req, res) {
