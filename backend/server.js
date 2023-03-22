@@ -43,7 +43,7 @@ app.post("/getTeacherInfo", async function (req, res) {
   let data = await readTeacherInfo(reqBody.id);
 
   res.setHeader("Content-Type", "application/json");
-  res.end(JSON.stringify({"id": "teacher_id"}));
+  res.end(JSON.stringify(data));
 });
 
 app.post("/addTeacher", async function (req, res) {
@@ -54,7 +54,7 @@ app.post("/addTeacher", async function (req, res) {
   let data = await addTeacher(reqBody.id, reqBody.name, reqBody.age);
 
   res.setHeader("Content-Type", "application/json");
-  res.end(JSON.stringify({"id": "teacher_id","name": "teacher_name","age": "teacher_age"}));
+  res.end(JSON.stringify(data));
 });
 
 
@@ -66,7 +66,7 @@ app.post("/editTeacher", async function (req, res) {
   let data = await updateTeacher(reqBody.name,reqBody.age,reqBody.id);
 
   res.setHeader("Content-Type", "application/json");
-  res.end(JSON.stringify({"id": "teacher_id","name": "teacher_name","age": "teacher_age"}));
+  res.end(JSON.stringify(data));
 });
 
 
@@ -79,7 +79,7 @@ app.post("/deleteTeacher", async function (req, res) {
   let data = await deleteTeacher(reqBody.id);
 
   res.setHeader("Content-Type", "application/json");
-  res.end(JSON.stringify({"id": "teacher_id"}));
+  res.end(JSON.stringify(data));
 });
 
 
@@ -99,7 +99,7 @@ app.post("/getStudentInfo", async function (req, res) {
   let data = await readStudentInfo(reqBody.id);
 
   res.setHeader("Content-Type", "application/json");
-  res.end(JSON.stringify({"id": "student_id"}));
+  res.end(JSON.stringify(data));
 });
 
 app.post("/addStudent", async function (req, res) {
@@ -115,7 +115,7 @@ app.post("/addStudent", async function (req, res) {
   );
 
   res.setHeader("Content-Type", "application/json");
-  res.end(JSON.stringify({"name": "student_name","age": "student_age","id": "student_id","hometown": "student_hometown"}));
+  res.end(JSON.stringify(data));
 });
 
 app.post("/deleteStudent", async function (req, res) {
@@ -126,7 +126,7 @@ app.post("/deleteStudent", async function (req, res) {
   let data = await deleteStudent(reqBody.id);
 
   res.setHeader("Content-Type", "application/json");
-  res.end(JSON.stringify({"id": "teacher_id"}));
+  res.end(JSON.stringify(data));
 });
 
 
@@ -139,7 +139,7 @@ app.post("/editStudent", async function (req, res) {
   let data = await updateStudent(reqBody.name,reqBody.age,reqBody.hometown,reqBody.id);
 
   res.setHeader("Content-Type", "application/json");
-  res.end(JSON.stringify({"name": "student_name","age": "student_age","id": "student_id","hometown": "student_hometown"}));
+  res.end(JSON.stringify(data));
 });
 
 
