@@ -1,6 +1,5 @@
 const express = require ("express");
 
-
 const {
   readTeachers,
   readStudents,
@@ -57,7 +56,6 @@ app.post("/addTeacher", async function (req, res) {
   res.end(JSON.stringify(data));
 });
 
-
 app.post("/editTeacher", async function (req, res) {
   let reqBody = req.body;
   console.log(
@@ -69,8 +67,6 @@ app.post("/editTeacher", async function (req, res) {
   res.end(JSON.stringify(data));
 });
 
-
-
 app.post("/deleteTeacher", async function (req, res) {
   let reqBody = req.body;
   console.log(
@@ -81,7 +77,6 @@ app.post("/deleteTeacher", async function (req, res) {
   res.setHeader("Content-Type", "application/json");
   res.end(JSON.stringify(data));
 });
-
 
 // ============== Student Related endpoints ==============
 
@@ -129,8 +124,6 @@ app.post("/deleteStudent", async function (req, res) {
   res.end(JSON.stringify(data));
 });
 
-
-
 app.post("/editStudent", async function (req, res) {
   let reqBody = req.body;
   console.log(
@@ -142,6 +135,4 @@ app.post("/editStudent", async function (req, res) {
   res.end(JSON.stringify(data));
 });
 
-
 module.exports = app;
-
